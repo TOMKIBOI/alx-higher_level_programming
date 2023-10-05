@@ -7,7 +7,7 @@ if number > 0:
 else:
     l_digit = number % -10
 
-output = f"Last digit of {number} is {last_digit}"
+output = f"Last digit of {number} is {l_digit}"
 
 if l_digit > 5:
     output += " and is greater than 5"
