@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-import builtins
-builtins.print("#pythoniscool")
+f = open(1, 'w'); f.write("#pythoniscool\n"); f.close()
