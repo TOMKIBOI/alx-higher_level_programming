@@ -1,33 +1,50 @@
-#!/usr/bin/python3
-"""defining class attribute rectangle
+#!/usr/bin/python3.
 """
+    class module Rectangle
+
+    """
 
 
 class Rectangle:
     """
-    defines class module Rectangle object
-    with width and height attributes.
-    Args:
-        width (int): The width of the new rectangle.
-        height (int): The height of the new rectangle
-    """
+        Rectangle Class that defines a rectangle
+
+        Attribute:
+            width (int): unkown
+            height (int) : unknown
+
+        """
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        """
+            Init Rectangle Class
+
+        Args:
+            width (int): The width of rectangle
+            height (int): Thhe height of rectangle
+        """
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
         """
-        Retrieve the width of the rectangle.
+            width getter
+
+            Return: The width of the Rectangle (int)
         """
         return self.__width
 
     @width.setter
     def width(self, value):
         """
-        Set the width of the rectangle and validated
+            Width setter
+        Args:
+            Value (int) : a value to set
+        Raises:
+            TypeError: When value is not int
+            ValueError: When value is less than 0
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
@@ -36,16 +53,23 @@ class Rectangle:
     @property
     def height(self):
         """
-        Retrieve the height of the rectangle.
+            height getter
+
+        Return: the height of the rectangle (int)
         """
         return self.__height
 
     @height.setter
     def height(self, value):
         """
-        Set the height of the rectangle and validated
+            height setter
+        Args:
+            value (int) : value to be set
+        Raises:
+            TypeError: When value is not int
+            ValueError: When value is less than 0
         """
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
