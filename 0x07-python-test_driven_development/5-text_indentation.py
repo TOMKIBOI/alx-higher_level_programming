@@ -1,49 +1,26 @@
 #!/usr/bin/python3
 """
-This prints text identification.
-"""
+    Text_indention module
+    """
 
 
 def text_indentation(text):
     """
-    Print a text with two new lines after each '.', '?', and ':' characters.
-
-    :param text: The input text as a string.
-    :raises TypeError: If text is not a string.
+    print text
+    2 new lines after each of these characters: ., ? and :
+    Args:
+        text (str): text
+    Raise
+        TypeError: when text is not str
     """
-    if not isinstance(text, str):
+    if type(text) is not str:
         raise TypeError("text must be a string")
-
-    lines = text.split('\n')
-    for line in lines:
-        line = line.strip()
-        if not line:
+    a = 0
+    while a < len(text):
+        if text[a] in [':', '.', '?']:
+            print(text[a])
             print()
-            continue
-
-        words = line.split()
-        output_line = words[0]
-
-        for word in words[1:]:
-            if word.endswith(('.', '?', ':')):
-                output_line += ' ' + word
-                print(output_line)
-                output_line = ""
-            else:
-                output_line += ' ' + word
-
-        if output_line:
-            print(output_line)
-
-
-if __name__ == "__main__":
-    text_indentation("""
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
-Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
-Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
-Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
-rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
-stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
-cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
-beatiorem! Iam ruinas videres""")
+            a += 1
+        else:
+            print(text[a], end='')
+        a += 1
