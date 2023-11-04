@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    Module prints a square 
+    Module prints a square
     """
 
 
