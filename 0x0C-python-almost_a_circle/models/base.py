@@ -7,15 +7,15 @@ import turtle
 
 
 class Base:
-    """Defines a base class"""
+    """Defines a model base class"""
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Method that assign the public instance attribute id
+        """Method which assigns public instance attribute id
         Args:
-           id(int): integer value to manage id in this project
+           id(int): integer value that manage id
         Return:
-           Always nothing.
+            nothing.
         """
         if id is not None:
             self.id = id
@@ -25,7 +25,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Method that returns the JSON
+        """Method which returns the JSON
            string representation
         Args:
            list_dictionaries(dict): List of dictionaries
@@ -40,7 +40,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ Method that writes the JSON string representation
+        """ Method which writes the JSON string representation
             of list_objs to a file
         Args:
             list_objs(list): List of objects
@@ -76,9 +76,9 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """Update the class Base and returns a instance with all
-           attributes already set
+           attrib
         Args:
-           dictionary: Dictionary with all attributes of the object
+           dictionary: Dictionary with all atributes
         Return:
            A instance with all attributes already set
         """
@@ -91,8 +91,8 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Method that returns a list of instances
-           - the type of these instances depends on cls
+        """Method that ret of instances
+           - the type
         """
         filename = "{}.json".format(cls.__name__)
         instance_list = []
@@ -155,10 +155,10 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Method that draws the shape with turtle module
+        """Method that draws the shape with turtle
         Args:
            list_squares(list): List of square objects
-           list_rectangles(list): List of rectangle objects
+           list_rectangles(list): List of rect objects
         Return:
            Always nothing
         """

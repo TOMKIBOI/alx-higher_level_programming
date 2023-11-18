@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a rectangle module (modules.rectangle)"""
+"""Module that  Defines a rectangle module base (modules.rectangle)"""
 from models.base import Base
 
 
@@ -7,7 +7,7 @@ class Rectangle(Base):
     """Defines a rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Method that init values for a rectangle object
+        """Method that initialize values for a rectangle object
         Args:
            width:size of the width
            height: size of the height
@@ -113,7 +113,7 @@ class Rectangle(Base):
     def area(self):
         """Method that returns the area of the rectangle object
         Args:
-           Not arguments
+           No arguments
         Return:
            Area of the rectangle object
         """
@@ -136,7 +136,7 @@ class Rectangle(Base):
                                                         self.height))
 
     def update(self, *args, **kwargs):
-        """Method that changed the order of arguments for rectangle object
+        """Method which changes the order of arguments for rectangle object
         Args:
            *args: list of arguments
            **kwargs: Dictionary with arguments
@@ -160,7 +160,7 @@ class Rectangle(Base):
                     pass
 
     def to_dictionary(self):
-        """Method that returns a dictionary with
+        """Method which returns a dictionary with
            attributes of the object.
         """
         dict_order = ['x', 'y', 'id', 'height', 'width']

@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-"""Module that defines a square object"""
+"""Module base that defines a square object"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Defines a square class"""
+    """Defines a square class module base"""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Method that initialized the square
+        """Method that initializes the square
         Args:
            size: side's size of the square
            x: Position on x axis.
@@ -40,7 +40,7 @@ class Square(Rectangle):
         self.heigth = value
 
     def update(self, *args, **kwargs):
-        """Method that update arguments for square object
+        """Method which update arguments for square object
         Args:
            *args: list of arguments.
            **kwargs: Dictionary of the arguments.
@@ -64,8 +64,8 @@ class Square(Rectangle):
                     pass
 
     def to_dictionary(self):
-        """Method that returns the dictionary
-           representation of a Square.
+        """Method whi.ch returns the dictionary
+           rep of a Square.
         """
         dict_order = ['id', 'x', 'size', 'y']
         dict_attrs = {}
