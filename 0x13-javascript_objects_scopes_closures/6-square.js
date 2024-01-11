@@ -17,4 +17,3 @@ class Square extends SquarePrin {
 }
 
 module.exports = Square;
-
